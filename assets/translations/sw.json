@@ -1,0 +1,102 @@
+{
+
+  "welcome to" : "Karibu",
+  "login to continue": "Ingia kuendelea",
+  "welcome-intro": "Pats taarifa za nyumba, viwanja na apartments kiganjani mwako",
+  "skip": "Ruka",
+
+  "don't have an account?" : "Hauna akaunti?",
+  "create" : "Unda",
+  "create account" : "Unda akaunti",
+  "login" : "Ingia",
+  "login to access all features" : "Ingia kupata features nyingi",
+  "follow the simple steps": "Fuata hatua rahisi",
+  "already have an account?": "Tayari una akaunti?",
+
+  "search contents" : "Tafuta",
+  "popular contents" : "Post Maarufu",
+  "recent contents" : "Post za hivi punde",
+  "view all" : "Tazama zote",
+
+  "search" : "Tafuta",
+  "search for contents" : "Tafuta Makazi",
+  "recent searches" : "Utafutaji wa hivi karibuni",
+  "search-description" :  "Bado hujatafuta kipengele chohote\n Tafuta sasa!",
+  "try again" : "Jaribu tena!",
+  "categories" : "Kitengo",
+
+  "clear all" : "Futa zote",
+  "bookmark is empty" : "Alamisho yako ni tupu!!",
+  "save your favourite contents here" : "Hifadhi chapisho pendwa hapa",
+  "added to your bookamrk" : "Imeongezwa kwenye alamisho",
+
+  "no categories found": "Hakuna kipengele kilicho patikana",
+  "no contents found" : "Hakuna chapisho lililo patikana",
+  "no internet" : "Hakuna muunganisho wa mtandao!",
+  "check your internet connection!" : "Angalia muunganisho wa mtandao!",
+  "contents you might love" : "Machapisho unayoweza kuyapenda",
+
+  "comments" : "Maoni",
+  "view comments" : "Tazama maoni",
+  "write a comment" : "Andika maoni",
+  "no comments found" : "Hakuna maoni yaliyopatikana",
+  "be the first to comment" : "Kua wakwanza kuandika maoni",
+  "login to make comments" : "Ingia kuandika maoni",
+  "comment success title" : "Maoni yamefanikiwa kuwasilishwa",
+  "comment success description" : "Maoni yako yamewasilishwa kwa maangalizo. Yataonyeshwa baada ya ukaguzi. \nAsante",
+  "you can't delete others comment" : "Huwezi kufuta maoni ya wengine",
+  "you can't edit others comment" : "Huwezi hariri maoni ya wengine",
+  "update comment" : "Sasisha maoni",
+
+  "delete" : "Futa",
+  "update" : "Sasisha",
+
+  "notifications" : "Taarifa",
+  "notification details" : "Maelezo ya taarifa",
+  "no notification title": "Hakuna taarifa iliyopatikana!",
+  "no notification description" : "Hujapokea taarifa yoyote. Hakikisha umewasha taarifa kwenye mipangilio.",
+
+  "settings": "Mipangilio",
+  "general settings" : "Mipangilio ya jumla",
+  "social settings" : "Mipangilio ya kijamii",
+  "about app" : "Kuhusu Program",
+  "dark mode" : "Modi nyeusi",
+  "get notifications" : "Pata taarifa",
+  "contact us" : "Wasiliana nasi",
+  "rate this app" : "Kadiria program hii",
+  "licence" : "Leseni",
+  "privacy policy" : "Sera ya faragha",
+  "about us" : "Kuhusu sisi",
+  "logout" : "Toka",
+  "our website" : "Tovuti yetu",
+  "facebook page" : "Ukurasa wa Facebook",
+  "youtube channel" : "Chaneli ya Youtube",
+
+  "logout title" : "Ondoka katika program?",
+  "logout description" : "Unataka kufunga program0? Utapoteza data zilizohifadhiwa. Endelea?",
+
+  "language" : "Lugha",
+  "select language" : "Chagua lugha",
+
+  "explore" : "Chunguza",
+  "videos" : "Videos",
+  "video contents": "Video Articles",
+  "twitter": "Twitter",
+  "bookmark": "Alamisho",
+  "bookmarks": "Alamisho",
+
+  "clear all notification-dialog": "Unataka kufuta data zote za taarifa?",
+  "clear all bookmark-dialog": "Unataka kufuta data zote za machapisho?",
+
+  "buy now" : "Purchase this app",
+  "buy now subtitle" : "Buy the full source code here",
+
+  "accept terms": "Kubali vigezo na masharti",
+  "flag comment" : "Flag this comment",
+  "unflag comment" : "Unflag this comment",
+  "report" : "Repoti",
+  "report-info" : "Your report has been sent succesfully to the admins",
+  "comment flagged" : "This comment has been flagged!"
+
+
+}
