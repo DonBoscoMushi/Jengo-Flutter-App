@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "409307594715",
+    "project_id": "jengo-real-estate",
+    "storage_bucket": "jengo-real-estate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409307594715:android:6cbe628381071db09bf1fe",
+        "android_client_info": {
+          "package_name": "com.jengorealestate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409307594715-3kgr46429oebm1ml0ubuifo2g1sqv0dh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1WaVoSoh95nNwmoeXnBfqIaf3-Id675I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409307594715-3kgr46429oebm1ml0ubuifo2g1sqv0dh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

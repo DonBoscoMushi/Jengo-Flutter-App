@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Config {
-  static const appName = 'News Freak';
+  static const appName = 'Jengo RE';
   static const supportEmail = 'YOUR_EMAIL';
   static const privacyPolicyUrl = 'https://www.mrb-lab.com/privacy-policy';
   static const iOSAppID = '000000';

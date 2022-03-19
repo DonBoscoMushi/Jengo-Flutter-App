@@ -1,4 +1,4 @@
-package com.mrblab.newsfreak
+package com.jengorealestate
 
 import io.flutter.embedding.android.FlutterActivity
 

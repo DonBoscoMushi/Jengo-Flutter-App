@@ -32,26 +32,25 @@ class _LanguagePopupState extends State<LanguagePopup> {
     return Column(
       children: [
         ListTile(
-          leading: Icon(Feather.globe, size: 22,),
+          leading: Icon(
+            Feather.globe,
+            size: 22,
+          ),
           horizontalTitleGap: 10,
-          title: Text(d, style: TextStyle(
-            fontWeight: FontWeight.w500
-          ),),
+          title: Text(
+            d,
+            style: TextStyle(fontWeight: FontWeight.w500),
+          ),
           onTap: () async {
-            if(d == 'English'){
+            if (d == 'English') {
               await context.setLocale(Locale('en'));
-            }
-            else if(d == 'Spanish'){
-              await context.setLocale(Locale('es'));
-            }
-            else if(d == 'Arabic'){
-              await context.setLocale(Locale('ar'));
+            } else if (d == 'Swahili') {
+              await context.setLocale(Locale('sw'));
             }
 
             // else if(d == 'Your_Language_Name'){
             //   await context.setLocale(Locale('your_language_code'));
             // }
-
 
             Navigator.pop(context);
           },
