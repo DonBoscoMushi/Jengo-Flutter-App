@@ -68,12 +68,6 @@ class _HomeTabState extends State<HomeTab> with AutomaticKeepAliveClientMixin, T
     super.dispose();
   }
 
-
-
-  
-
-  
-
   @override
   Widget build(BuildContext context) {
     super.build(context);
