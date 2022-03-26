@@ -2,8 +2,6 @@ import 'dart:io';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class AdConfig {
-
-
   //Enable or Disable Ads
   static const bool isAdsEnabled = false;
 

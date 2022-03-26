@@ -11,8 +11,8 @@ class WpConfig {
   // Hometab 4 categories
   // -- 'Serial Number' : [Category Id, 'Category Name'] -- Length should be 4.
   static const Map selectedCategories = {
-    '1': [29, "Real Estate"],
-    '2': [1, "Uncategorized"],
+    '1': [29, "Appartments"],
+    '2': [1, "Houses"],
     '3': [5, "Price"],
     '4': [6, "Location"],
   };

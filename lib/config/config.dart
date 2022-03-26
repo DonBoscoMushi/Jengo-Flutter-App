@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 
 class Config {
   static const appName = 'Jengo RE';
-  static const supportEmail = 'YOUR_EMAIL';
-  static const privacyPolicyUrl = 'https://www.mrb-lab.com/privacy-policy';
+  static const supportEmail = 'donnichos@gmail.com';
+  static const privacyPolicyUrl = 'https://www.jengo101.co.tz/privacy-policy-2';
   static const iOSAppID = '000000';
 
   //SOCIAL LINKS
-  static const String facebookPageUrl = 'https://www.facebook.com/mrblab24';
+  static const String facebookPageUrl =
+      'https://www.facebook.com/jengorealestate';
   static const String youtubeChannelUrl =
-      'https://www.youtube.com/channel/UCnNr2eppWVVo-NpRIy1ra7A';
-  static const String twitterUrl = 'https://twitter.com/FlutterDev';
+      'https://www.youtube.com/channel/jengorealestate';
+  static const String twitterUrl = 'https://twitter.com/jengorealestate';
 
   //app theme color
-  final Color appThemeColor = Color(0xFFf8bd7f);
+  final Color appThemeColor = Color(0xFF0073e1);
 
   // Icons
   static const String appIcon = 'assets/images/icon.png';
