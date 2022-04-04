@@ -24,7 +24,7 @@ class _Tab0State extends State<Tab0> {
   Future _onRefresh() async {
     context.read<FeaturedBloc>().saveDotIndex(0);
     context.read<FeaturedBloc>().fetchData();
-    context.read<PopularArticlesBloc>().fetchData();
+    // context.read<PopularArticlesBloc>().fetchData();
     context.read<LatestArticlesBloc>().onReload();
   }
 
@@ -42,7 +42,7 @@ class _Tab0State extends State<Tab0> {
               child: Column(
               children: [
                 Featured(),
-                PopularArticles(scaffoldKey: widget.scaffoldKey),
+                // PopularArticles(scaffoldKey: widget.scaffoldKey),
                 LattestArticles(scaffoldKey: widget.scaffoldKey),
                 
               ],

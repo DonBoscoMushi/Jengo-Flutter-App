@@ -27,7 +27,7 @@ class _FeaturedState extends State<Featured> {
           child: PageView.builder(
             controller: PageController(initialPage: 0),
             scrollDirection: Axis.horizontal,
-            itemCount: fb.articles.isEmpty ? 1 : fb.articles.length,
+            itemCount: fb.articles.isEmpty ? 1 : 4,
             onPageChanged: (int pageIndex) => context.read<FeaturedBloc>().saveDotIndex(pageIndex),
             itemBuilder: (BuildContext context, int index){
               if (fb.articles.isEmpty) {
@@ -45,7 +45,7 @@ class _FeaturedState extends State<Featured> {
           alignment: Alignment.center,
           padding: EdgeInsets.all(0),
           child: DotsIndicator(
-            dotsCount: fb.articles.isEmpty ? 1 : fb.articles.length,
+            dotsCount: fb.articles.isEmpty ? 1 : 4,
             position: fb.dotIndex.toDouble(),
             decorator: DotsDecorator(
               activeColor: Theme.of(context).colorScheme.primary,

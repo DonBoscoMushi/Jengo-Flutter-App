@@ -26,7 +26,7 @@ class CustomDrawer extends StatelessWidget {
             Container(
                 height: 250,
                 width: double.infinity,
-                color: Theme.of(context).colorScheme.primaryContainer,
+                color: Colors.grey,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,

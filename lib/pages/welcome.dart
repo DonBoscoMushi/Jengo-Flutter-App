@@ -91,14 +91,6 @@ class _WelcomePageState extends State<WelcomePage> {
                                         .colorScheme
                                         .secondary),
                               ).tr(),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Image(
-                                image: AssetImage(Config.logo),
-                                height: 40,
-                                width: 160,
-                              )
                             ],
                           ),
                           Padding(

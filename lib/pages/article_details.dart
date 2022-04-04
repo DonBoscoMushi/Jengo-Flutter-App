@@ -232,6 +232,118 @@ class _ArticleDetailsState extends State<ArticleDetails> {
                                     SizedBox(
                                       height: 10,
                                     ),
+                                    //properties items
+                                    Row(
+                                      children: <Widget>[
+                                        Row(
+                                          children: [
+                                            Icon(
+                                              CupertinoIcons.house,
+                                              color: Colors.grey[400],
+                                              size: 16,
+                                            ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text(
+                                              '${article.rooms} Rooms',
+                                              style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .secondary),
+                                            )
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Icon(
+                                              CupertinoIcons.bed_double,
+                                              color: Colors.grey[400],
+                                              size: 16,
+                                            ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text(
+                                              '${article.bedrooms} Bedrooms',
+                                              style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .secondary,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    //gerages & bathrooms
+                                    Row(
+                                      children: <Widget>[
+                                      
+                                        Row(
+                                          children: [
+                                            Icon(
+                                              CupertinoIcons.car_detailed,
+                                              color: Colors.grey[400],
+                                              size: 16,
+                                            ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text(
+                                              'Gerage size: ${article.gerageSize}',
+                                              style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .secondary,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    //address
+                                    Row(
+                                      children: <Widget>[
+                                        Row(
+                                          children: [
+                                            Icon(
+                                              CupertinoIcons.location,
+                                              color: Colors.grey[400],
+                                              size: 16,
+                                            ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text(
+                                              'Location: ${article.address}',
+                                              style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .secondary,
+                                                      fontWeight: FontWeight.w600),
+                                                      
+                                            )
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
                                     Text(
                                       AppService.getNormalText(article.title!),
                                       style: TextStyle(

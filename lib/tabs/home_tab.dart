@@ -82,7 +82,7 @@ class _HomeTabState extends State<HomeTab> with AutomaticKeepAliveClientMixin, T
               automaticallyImplyLeading: false,
               centerTitle: false,
               titleSpacing: 0,
-              title: Image(image: AssetImage(Config.logo,), height: 19,),
+              title: Image(image: AssetImage(Config.logo,), height: 30,),
               leading: IconButton(
                 icon: Icon(
                   Feather.menu,

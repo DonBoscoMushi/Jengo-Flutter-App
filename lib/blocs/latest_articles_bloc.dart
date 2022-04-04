@@ -5,7 +5,6 @@ import '../models/article.dart';
 import 'package:http/http.dart' as http;
 
 class LatestArticlesBloc extends ChangeNotifier {
-
   int _page = 1;
   int get page => _page;
 
@@ -17,13 +16,14 @@ class LatestArticlesBloc extends ChangeNotifier {
 
   int _postAmountPerLoad = 10;
 
-
-
   Future fetchData() async {
+    // var response = WpConfig.blockedCategoryIds.isEmpty
+    //   ? await http.get(Uri.parse("${WpConfig.websiteUrl}/wp-json/wp/v2/posts/?page=$_page&per_page=$_postAmountPerLoad&_fields=id,date,title,content,custom,link,tags"))
+    //   : await http.get(Uri.parse("${WpConfig.websiteUrl}/wp-json/wp/v2/posts/?page=$_page&per_page=$_postAmountPerLoad&_fields=id,date,title,content,custom,link,tags&categories_exclude=" + WpConfig.blockedCategoryIds));
 
-    var response = WpConfig.blockedCategoryIds.isEmpty
-      ? await http.get(Uri.parse("${WpConfig.websiteUrl}/wp-json/wp/v2/posts/?page=$_page&per_page=$_postAmountPerLoad&_fields=id,date,title,content,custom,link,tags"))
-      : await http.get(Uri.parse("${WpConfig.websiteUrl}/wp-json/wp/v2/posts/?page=$_page&per_page=$_postAmountPerLoad&_fields=id,date,title,content,custom,link,tags&categories_exclude=" + WpConfig.blockedCategoryIds));
+    var response = await http.get(Uri.parse(
+        "${WpConfig.websiteUrl}/wp-json/custom-routes/v1/estate-properties"));
+
     if (response.statusCode == 200) {
       List decodedData = jsonDecode(response.body);
       _articles.addAll(decodedData.map((m) => Article.fromJson(m)).toList());
@@ -31,26 +31,20 @@ class LatestArticlesBloc extends ChangeNotifier {
     notifyListeners();
   }
 
-
-
-  setLoading (bool value){
+  setLoading(bool value) {
     _loading = value;
     notifyListeners();
   }
 
-
-  pageIncreament (){
+  pageIncreament() {
     _page += 1;
     notifyListeners();
   }
 
-  onReload () async{
+  onReload() async {
     _articles.clear();
     _page = 1;
     notifyListeners();
     fetchData();
   }
-
-
-  
 }

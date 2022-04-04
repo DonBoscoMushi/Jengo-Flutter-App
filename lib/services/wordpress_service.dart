@@ -48,9 +48,14 @@ class WordPressService {
 
 
   Future fetchPostsBySearch(String searchText) async {
-    var response = WpConfig.blockedCategoryIds.isEmpty
-     ? await http.get(Uri.parse("${WpConfig.websiteUrl}/wp-json/wp/v2/posts?per_page=30&search=$searchText"))
-     : await http.get(Uri.parse("${WpConfig.websiteUrl}/wp-json/wp/v2/posts?per_page=30&search=$searchText&categories_exclude=" + WpConfig.blockedCategoryIds));
+    // var response = WpConfig.blockedCategoryIds.isEmpty
+    //  ? await http.get(Uri.parse("${WpConfig.websiteUrl}/wp-json/wp/v2/posts?per_page=30&search=$searchText"))
+    //  : await http.get(Uri.parse("${WpConfig.websiteUrl}/wp-json/wp/v2/posts?per_page=30&search=$searchText&categories_exclude=" + WpConfig.blockedCategoryIds));
+    
+    //modify to fetch only inputed txts
+    var response = await http.get(Uri.parse(
+        "${WpConfig.websiteUrl}/wp-json/custom-routes/v1/estate-properties"));
+    
     List? decodedData = jsonDecode(response.body);
     List<Article>? articles;
 

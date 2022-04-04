@@ -3,7 +3,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class AdConfig {
   //Enable or Disable Ads
-  static const bool isAdsEnabled = false;
+  static const bool isAdsEnabled = true;
 
   //Set user clicks to show ads in the content description screen
   final int userClicksAmountsToShowEachAd = 3;
@@ -19,10 +19,6 @@ class AdConfig {
 
   static const String bannerAdUnitIdAndroid = 'ca-app-pub-3940256099942544/6300978111';
   static const String bannerAdUnitIdiOS = 'ca-app-pub-3940256099942544/2934735716';
-
-
-
-
 
 
 

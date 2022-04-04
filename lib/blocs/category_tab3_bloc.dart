@@ -26,10 +26,14 @@ class CategoryTab3Bloc extends ChangeNotifier {
   int _postAmountPerLoad = 10;
 
   Future fetchData(int categoryId, mounted) async {
-    var response = WpConfig.blockedCategoryIds.isEmpty
-      ? await http.get(Uri.parse("${WpConfig.websiteUrl}/wp-json/wp/v2/posts?categories[]=" + categoryId.toString() + "&page=$_page&per_page=$_postAmountPerLoad&_fields=id,date,title,content,custom,link,tags"))
-      : await http.get(Uri.parse("${WpConfig.websiteUrl}/wp-json/wp/v2/posts?categories[]=" + categoryId.toString() + "&page=$_page&per_page=$_postAmountPerLoad&_fields=id,date,title,content,custom,link,tags&categories_exclude=" + WpConfig.blockedCategoryIds));
+    // var response = WpConfig.blockedCategoryIds.isEmpty
+    //   ? await http.get(Uri.parse("${WpConfig.websiteUrl}/wp-json/wp/v2/posts?categories[]=" + categoryId.toString() + "&page=$_page&per_page=$_postAmountPerLoad&_fields=id,date,title,content,custom,link,tags"))
+    //   : await http.get(Uri.parse("${WpConfig.websiteUrl}/wp-json/wp/v2/posts?categories[]=" + categoryId.toString() + "&page=$_page&per_page=$_postAmountPerLoad&_fields=id,date,title,content,custom,link,tags&categories_exclude=" + WpConfig.blockedCategoryIds));
 
+
+    var response = await http.get(Uri.parse(
+        "${WpConfig.websiteUrl}/wp-json/custom-routes/v1/estate-properties"));
+        
     if (mounted) {
       if (response.statusCode == 200) {
         List? decodedData = jsonDecode(response.body);
