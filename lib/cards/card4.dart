@@ -64,7 +64,7 @@ class Card4 extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(article.category!.toUpperCase(),
+                    Text(article.price!.toUpperCase(),
                       style: TextStyle(
                         fontSize: 13,
                         color: Theme.of(context).colorScheme.secondary,

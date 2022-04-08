@@ -146,7 +146,7 @@ class _BookmarkTabState extends State<BookmarkTab> with AutomaticKeepAliveClient
                           video: bookmarkList.getAt(index)['video'],
                           author: bookmarkList.getAt(index)['author'],
                           avatar: bookmarkList.getAt(index)['avatar'],
-                          category: bookmarkList.getAt(index)['category'],
+                          price: bookmarkList.getAt(index)['category'],
                           date: bookmarkList.getAt(index)['date'],
                           timeAgo: bookmarkList.getAt(index)['time_ago'],
                           link: bookmarkList.getAt(index)['link'],

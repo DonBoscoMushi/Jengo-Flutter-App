@@ -112,7 +112,7 @@ class _VideoArticleDeatilsState extends State<VideoArticleDeatils> {
                                             top: 5,
                                             bottom: 5),
                                         child: Text(
-                                          article.category!,
+                                          article.price!,
                                           style: TextStyle(
                                               fontSize: 15,
                                               color: Theme.of(context)

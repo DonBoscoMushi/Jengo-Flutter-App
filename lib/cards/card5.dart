@@ -69,7 +69,7 @@ class Card5 extends StatelessWidget {
                         height: 8,
                       ),
                       Text(
-                        article.category!.toUpperCase(),
+                        article.price!.toUpperCase(),
                         style: TextStyle(
                             fontSize: 13,
                             color: Theme.of(context).colorScheme.secondary,

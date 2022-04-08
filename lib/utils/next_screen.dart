@@ -43,7 +43,7 @@ void navigateToDetailsScreen (context, Article article, String? heroTag){
       builder: (context) => ArticleDetails(articleData: article, tag: heroTag,)),
     );
   }else{
-     Navigator.push(context, MaterialPageRoute(
+    Navigator.push(context, MaterialPageRoute(
       builder: (context) => VideoArticleDeatils(article: article)),
 
     );

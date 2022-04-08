@@ -30,7 +30,7 @@ class BookmarkService {
         'video' : article.video,
         'author' : article.author,
         'avatar' : article.avatar,
-        'category' : article.category,
+        'category' : article.price,
         'date' : article.date,
         'time_ago': article.timeAgo,
         'link' : article.link,

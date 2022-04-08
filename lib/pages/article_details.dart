@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -17,6 +18,7 @@ import 'package:wordpress_app/widgets/html_body.dart';
 import 'package:wordpress_app/widgets/related_articles.dart';
 import '../models/article.dart';
 import '../utils/cached_image.dart';
+import 'package:card_swiper/card_swiper.dart';
 import 'package:provider/provider.dart';
 import 'package:easy_localization/easy_localization.dart';
 
@@ -34,6 +36,15 @@ class ArticleDetails extends StatefulWidget {
 class _ArticleDetailsState extends State<ArticleDetails> {
   double _rightPaddingValue = 140;
   var scaffoldKey = GlobalKey<ScaffoldState>();
+
+
+// fetch this    https://www.jengo101.co.tz/wp-json/wp/v2/media?parent=18896
+
+  List<String> _images = [
+    'https://www.jengo101.co.tz/wp-content/uploads/2021/11/0C1BEA26-0B14-45FD-AE8B-D206B2F9EF93.jpeg',
+    'https://www.jengo101.co.tz/wp-content/uploads/2021/11/614E7DA6-9C57-4797-AAAD-8F8B5839797D.jpeg',
+
+  ];
 
   Future _handleShare() async {
     Share.share(widget.articleData!.link!);
@@ -56,6 +67,8 @@ class _ArticleDetailsState extends State<ArticleDetails> {
     final Article? article = widget.articleData;
     final bookmarkedList = Hive.box(Constants.bookmarkTag);
 
+    
+
     return Scaffold(
         key: scaffoldKey,
         resizeToAvoidBottomInset: false,
@@ -75,14 +88,16 @@ class _ArticleDetailsState extends State<ArticleDetails> {
                       expandedHeight: 290,
                       systemOverlayStyle: SystemUiOverlayStyle.light,
                       flexibleSpace: FlexibleSpaceBar(
-                          background: widget.tag == null
-                              ? CustomCacheImage(
-                                  imageUrl: article!.image, radius: 0.0)
-                              : Hero(
-                                  tag: widget.tag!,
-                                  child: CustomCacheImage(
-                                      imageUrl: article!.image, radius: 0.0),
-                                )),
+                        background: Swiper(
+                          itemCount: _images.length,
+                          itemBuilder: (BuildContext context, int index) =>
+                              Image.network(
+                            _images[index],
+                            fit: BoxFit.cover,
+                          ),
+                          autoplay: true,
+                        ),
+                      ),
                       actions: <Widget>[
                         SizedBox(
                           width: 15,
@@ -117,7 +132,7 @@ class _ArticleDetailsState extends State<ArticleDetails> {
                             icon: Icon(Feather.external_link,
                                 size: 18, color: Colors.grey[900]),
                             onPressed: () => AppService()
-                                .openLinkWithCustomTab(context, article.link!),
+                                .openLinkWithCustomTab(context, article!.link!),
                           ),
                         ),
                         SizedBox(
@@ -133,7 +148,8 @@ class _ArticleDetailsState extends State<ArticleDetails> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+                                padding:
+                                    const EdgeInsets.fromLTRB(20, 20, 20, 0),
                                 child: Column(
                                   children: [
                                     Row(
@@ -156,7 +172,7 @@ class _ArticleDetailsState extends State<ArticleDetails> {
                                                   top: 5,
                                                   bottom: 5),
                                               child: Text(
-                                                article.category!,
+                                                article!.price!,
                                                 style: TextStyle(
                                                     fontSize: 15,
                                                     color: Theme.of(context)
@@ -287,7 +303,6 @@ class _ArticleDetailsState extends State<ArticleDetails> {
                                     //gerages & bathrooms
                                     Row(
                                       children: <Widget>[
-                                      
                                         Row(
                                           children: [
                                             Icon(
@@ -334,8 +349,7 @@ class _ArticleDetailsState extends State<ArticleDetails> {
                                                   color: Theme.of(context)
                                                       .colorScheme
                                                       .secondary,
-                                                      fontWeight: FontWeight.w600),
-                                                      
+                                                  fontWeight: FontWeight.w600),
                                             )
                                           ],
                                         ),
@@ -420,7 +434,6 @@ class _ArticleDetailsState extends State<ArticleDetails> {
                   ],
                 ),
               ),
-
               // banner ads
               AdConfig.isAdsEnabled == true ? BannerAdWidget() : Container(),
             ],
@@ -428,3 +441,76 @@ class _ArticleDetailsState extends State<ArticleDetails> {
         ));
   }
 }
+
+// class ImageView extends StatelessWidget {
+//   final List<String> images;
+//   final String selectedImages;
+//   ImageView({this.images, this.selectedImages});
+//   @override
+//   Widget build(BuildContext context) {
+//     images.removeWhere((i) => i == selectedImages);
+//     images.insert(0, selectedImages);
+//     return Scaffold(
+//       appBar: AppBar(),
+//       body: Container(
+//         height: double.maxFinite,
+//         width: double.maxFinite,
+//         child: CarouselSlider(
+//           options: CarouselOptions(
+//             viewportFraction: 1.0,
+//             height: double.maxFinite,
+//           ),
+//           items: [
+//             ...images.map(
+//               (image) => Image.network(
+//                 image,
+//                 fit: BoxFit.fill,
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+// Widget __imgCarousel() {
+
+
+// background: widget.tag == null
+//                               ? CustomCacheImage(
+//                                   imageUrl: article!.image, radius: 0.0)
+//                               : Hero(
+//                                   tag: widget.tag!,
+//                                   child: CustomCacheImage(
+//                                       imageUrl: article!.image, radius: 0.0),
+//                                 ),
+
+
+//   return Container(
+//       height: double.infinity,
+//       child: CarouselSlider(options: CarouselOptions(height: 400.0),
+//         items: [
+          
+//           'http://pic3.16pic.com/00/55/42/16pic_5542988_b.jpg',
+//           'http://photo.16pic.com/00/38/88/16pic_3888084_b.jpg',
+//           'http://pic3.16pic.com/00/55/42/16pic_5542988_b.jpg',
+//           'http://photo.16pic.com/00/38/88/16pic_3888084_b.jpg'
+//         ].map((i) {
+//           return Builder(
+//             builder: (BuildContext context) {
+//               return Container(
+//                 width: MediaQuery.of(context).size.width,
+//                 margin: EdgeInsets.symmetric(horizontal: 5.0),
+//                 decoration: BoxDecoration(
+//                   color: Colors.amber
+//                 ),
+//                 child: Text('text $i', style: TextStyle(fontSize: 16.0),)
+//               );
+//             },
+//           );
+//         }).toList(),
+//       ),
+      
+//     );
+//   }
+// }

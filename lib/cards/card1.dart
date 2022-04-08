@@ -66,7 +66,7 @@ class Card1 extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(5),
                                 color: Colors.blueGrey[600]),
                             child: Text(
-                              article.category!,
+                              article.price!,
                               style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500,

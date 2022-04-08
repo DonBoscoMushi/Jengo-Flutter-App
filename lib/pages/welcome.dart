@@ -31,10 +31,11 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Colors.grey[300],
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(60),
           child: AppBar(
+            backgroundColor: Colors.grey[300],
             elevation: 0,
             actions: [
               TextButton(

@@ -34,15 +34,12 @@ class FeatureCard extends StatelessWidget {
                               blurRadius: 10,
                               offset: Offset(0, 3))
                         ]),
-
                     child: CustomCacheImage(imageUrl: article.image, radius: 5),
                   ),
-
                   VideoIcon(tags: article.tags, iconSize: 80,)
                 ],
               ),
             ),
-            
             
             Positioned(
                 bottom: 0,

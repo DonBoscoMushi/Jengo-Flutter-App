@@ -10,7 +10,7 @@ class Article {
   final String? video;
   final String? author;
   final String? avatar;
-  final String? category;
+  final String? price;
   final String? date;
   final String? timeAgo;
   final String? link;
@@ -32,7 +32,7 @@ class Article {
       this.video,
       this.author,
       this.avatar,
-      this.category,
+      this.price,
       this.date,
       this.timeAgo,
       this.link,
@@ -84,9 +84,9 @@ class Article {
             .format(DateTime.parse(json["date_posted"]))
             .toString(),
         //timeAgo: Jiffy(json["date"]).fromNow(),
-        timeAgo: '',
+        timeAgo: json['date_posted'] ?? '',
         link: json['link'] ?? 'empty',
-        category: price ?? '',
+        price: price ?? '',
         catId: json["id"] ?? 0,
         tags: json['author']['roles'] ?? '',
         size: json['property_size'] ?? '',
