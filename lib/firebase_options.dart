@@ -50,19 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB9Ie0ArCX-L0plp3NcJJ5OqDAuq-spSTc',
-    appId: '1:881634802996:android:39b5d8e1f9ee2803ca7961',
-    messagingSenderId: '881634802996',
-    projectId: 'jengo-real-estate-tz',
-    storageBucket: 'jengo-real-estate-tz.appspot.com',
+    apiKey: 'AIzaSyC1WaVoSoh95nNwmoeXnBfqIaf3-Id675I',
+    appId: '1:409307594715:android:9b2405d333547e6a9bf1fe',
+    messagingSenderId: '409307594715',
+    projectId: 'jengo-real-estate',
+    storageBucket: 'jengo-real-estate.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDtECprpE7wVj-bB-2lqAT3hji5JMsBex4',
-    appId: '1:881634802996:ios:c48f56982c571064ca7961',
-    messagingSenderId: '881634802996',
-    projectId: 'jengo-real-estate-tz',
-    storageBucket: 'jengo-real-estate-tz.appspot.com',
+    apiKey: 'AIzaSyCTYQHuOAO9OzwE_kl-LzRaS_FrxACb7qU',
+    appId: '1:409307594715:ios:6d91bcdc712738c19bf1fe',
+    messagingSenderId: '409307594715',
+    projectId: 'jengo-real-estate',
+    storageBucket: 'jengo-real-estate.appspot.com',
     iosBundleId: 'com.jengo.app',
   );
+
 }
